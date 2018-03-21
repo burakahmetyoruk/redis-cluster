@@ -3,6 +3,8 @@ package com.burak.redis.service;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
+import java.util.Set;
+
 @Service
 public class RedisService {
 
@@ -21,6 +23,12 @@ public class RedisService {
     }
 
     public int getKeysCount() {
-        return this.redisTemplate.keys("*").size();
+        Set<String> keysSet = this.redisTemplate.keys("*");
+        return keysSet != null ? keysSet.size() : 0;
     }
+
+    public Set<String> getAllKeys() {
+        return this.redisTemplate.keys("*");
+    }
+
 }
