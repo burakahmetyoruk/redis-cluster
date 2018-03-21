@@ -1,4 +1,4 @@
 # Istanbul Spring Meetup
-## Spring Data Redis Cluster and Redis Sentinel
+## Spring Data Redis Cluster
 
-Demo Project for Redis Cluster and Redis Sentinel configurations
+Demo Project for Redis Cluster with Spring Boot
